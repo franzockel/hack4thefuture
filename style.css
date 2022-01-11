@@ -30,12 +30,30 @@ h1 {
   margin: 15vh 0 24px;
 }
 
+h2 {
+  font-family: "Sectra";
+}
+
+p {
+  font-family: "IBM Plex Sans";
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.04em;
+}
+
 p.category {
   font-family: "Space Grotesk";
   font-size: 14px;
   line-height: 125%;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+p.subline {
+  font-family: "IBM Plex Sans";
+  font-style: italic;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .grid {
@@ -50,7 +68,7 @@ button {
   border-radius: 2px;
   text-transform: uppercase;
   font-family: "Space Grotesk";
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.1em;
 }
 
@@ -118,6 +136,7 @@ header .category {
 header button {
   grid-column-start: 1;
 }
+
 /* ==========REGISTER SECTION========== */
 
 .register {
@@ -130,10 +149,6 @@ header button {
 
 .register div:nth-of-type(1) p {
   margin-bottom: 96px;
-  font-family: "IBM Plex Sans";
-  font-style: italic;
-  font-weight: 600;
-  font-size: 18px;
 }
 
 .register div:nth-of-type(2) {
@@ -147,4 +162,59 @@ header button {
   line-height: 110%;
   margin-top: 120px;
   margin-bottom: 60px;
+}
+
+/* ==========ORGANIZERS SECTION========== */
+
+.organizers h2 {
+  color: var(--color-purple);
+  font-size: 160px;
+}
+
+.organizer {
+  display: flex;
+  margin-bottom: 64px;
+  grid-column: 5 / span 7;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 24px;
+}
+
+.organizer:last-of-type {
+  margin-bottom: 0;
+}
+
+.organizerLogo {
+  background-color: silver;
+  color: white;
+  display: inline-block;
+  padding: 8px;
+  grid-column: span 2;
+  height: 32px;
+  text-align: center;
+}
+
+.organizer div {
+  grid-column: span 5;
+}
+
+.organizer a {
+  font-family: "IBM Plex Sans";
+  font-style: italic;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-gray);
+  text-decoration: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.organizer a:after {
+  content: url("./assets/images/Arrow.svg");
+  margin-left: 48px;
+  margin-top: 11px;
+}
+
+.organizer .category {
+  margin-bottom: 24px;
 }
