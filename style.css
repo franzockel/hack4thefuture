@@ -1,9 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;1,600&family=Space+Grotesk&display=swap");
+
 @font-face {
   font-family: "Sectra";
-  src: url("./assets/GT-Sectra-Display-Super-Italic-Trial.woff2");
+  src: url("./assets/fonts/GT-Sectra-Display-Super-Italic-Trial.woff2");
 }
-
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;1,600&family=Space+Grotesk&display=swap");
 
 /* font-family: 'IBM Plex Sans', sans-serif;
 font-family: 'Space Grotesk', sans-serif; */
@@ -21,7 +21,24 @@ font-family: 'Space Grotesk', sans-serif; */
   box-sizing: border-box;
 }
 
-section {
+h1 {
+  font-family: "Sectra";
+  font-size: 96px;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: var(--color-turquoise);
+  margin: 15vh 0 24px;
+}
+
+p.category {
+  font-family: "Space Grotesk";
+  font-size: 14px;
+  line-height: 125%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 24px;
@@ -33,7 +50,7 @@ button {
   border-radius: 2px;
   text-transform: uppercase;
   font-family: "Space Grotesk";
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.1em;
 }
 
@@ -66,8 +83,41 @@ nav {
   background: var(--color-white);
 }
 
-/* ==========HEADER SECTION========== */
+nav button:not(nav button:last-of-type) {
+  margin-right: 24px;
+}
 
+/* ==========HEADER SECTION========== */
+header {
+  background-color: var(--color-purple);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("./assets/images/photo-1519389950473-47ba0277781c.png");
+  background-size: 50% 100%, cover;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+header h1 {
+  grid-column: span 9;
+}
+
+header div:nth-of-type(1) {
+  grid-column: span 9;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  column-gap: 24px;
+}
+
+header .category {
+  margin-bottom: 24px;
+  grid-column: span 5;
+  color: white;
+}
+
+header button {
+  grid-column-start: 1;
+}
 /* ==========REGISTER SECTION========== */
 
 .register {
@@ -83,7 +133,7 @@ nav {
   font-family: "IBM Plex Sans";
   font-style: italic;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .register div:nth-of-type(2) {
