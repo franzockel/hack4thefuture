@@ -163,7 +163,7 @@ header h1 {
   z-index: 10;
 }
 
-header div:nth-of-type(1) {
+header div div {
   grid-column: span 9;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
