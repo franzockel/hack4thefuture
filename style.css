@@ -19,6 +19,7 @@ font-family: 'Space Grotesk', sans-serif; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
@@ -41,7 +42,8 @@ p {
   letter-spacing: 0.04em;
 }
 
-p.category {
+p.category,
+h4 {
   font-family: "Space Grotesk";
   font-size: 14px;
   line-height: 125%;
@@ -49,7 +51,8 @@ p.category {
   text-transform: uppercase;
 }
 
-p.subline {
+p.subline,
+h3 {
   font-family: "IBM Plex Sans";
   font-style: italic;
   font-weight: 600;
@@ -61,6 +64,8 @@ p.subline {
   grid-template-columns: repeat(12, 1fr);
   column-gap: 24px;
   padding: 96px 150px 120px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 button {
@@ -151,13 +156,11 @@ header {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("./assets/images/photo-1519389950473-47ba0277781c.png");
-  background-size: 50% 100%, cover;
-  background-repeat: no-repeat;
-  background-position: right;
 }
+
 header h1 {
   grid-column: span 9;
+  z-index: 10;
 }
 
 header div:nth-of-type(1) {
@@ -169,7 +172,7 @@ header div:nth-of-type(1) {
 
 header .category {
   margin-bottom: 24px;
-  grid-column: span 5;
+  grid-column: span 4;
   color: white;
 }
 
@@ -177,6 +180,17 @@ header button {
   grid-column-start: 1;
 }
 
+.headerBgImg {
+  background-image: url("./assets/images/photo-1519389950473-47ba0277781c.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
 /* ==========REGISTER SECTION========== */
 
 .register {
@@ -266,4 +280,95 @@ header button {
 
 .organizer .category {
   margin-bottom: 24px;
+}
+
+/* ==========SCHEDULE SECTION========== */
+
+.schedule {
+  background-color: var(--color-turquoise);
+}
+
+.levelOne {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scheduleHeadline {
+  font-size: 80px;
+  transform-origin: top left;
+  transform: rotate(-90deg) translateX(-446px);
+  color: var(--color-purple);
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(100vh - 446px - 24px);
+  width: 446px;
+  height: 123px;
+}
+
+.scheduleHeadline h2 {
+  line-height: 100px;
+}
+
+.scheduleContent {
+  background-color: var(--color-gray);
+  padding: 96px 150px 120px calc((100vw - 300px - 11 * 24px) / 12 + 24px);
+  width: calc(
+    100vw - 150px - 4 * 24px - ((100vw - 300px - 11 * 24px) / 12) * 4
+  );
+}
+
+.levelOne .scheduleContent {
+  color: var(--color-turquoise);
+}
+
+.scheduleContent > div {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 80px;
+}
+
+.scheduleContent > div:last-of-type {
+  margin-bottom: 0;
+}
+
+.scheduleContent .subline {
+  margin-bottom: 64px;
+}
+
+.levelOne .scheduleContent .category {
+  color: var(--color-white);
+  margin-right: 16px;
+}
+
+.scheduleContent h3 {
+  margin-bottom: 16px;
+}
+
+.scheduleContent .workshop {
+  margin-top: 48px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.scheduleContent .workshop h4 {
+  margin-bottom: 16px;
+}
+
+.scheduleContent .workshop:before {
+  content: "<";
+  font-family: "Sectra";
+  font-size: 64px;
+  line-height: 64px;
+  color: var(--color-purple);
+  margin-bottom: 8px;
+}
+
+.scheduleContent .workshop:after {
+  content: ">";
+  font-family: "Sectra";
+  font-size: 64px;
+  line-height: 64px;
+  color: var(--color-purple);
+  margin-bottom: 8px;
 }
