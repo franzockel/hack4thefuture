@@ -220,6 +220,11 @@ header button {
 
 /* ==========ORGANIZERS SECTION========== */
 
+.organizers {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .organizers h2 {
   color: var(--color-purple);
   font-size: 160px;
