@@ -483,10 +483,22 @@ header button {
 .headlineWrapper {
   width: 100%;
   overflow: hidden;
+  display: flex;
 }
 
-.headlineWrapper h2 .benefits h2 {
+.benefits h2 {
   font-size: 128px;
+  animation: title 4s infinite linear;
+  margin-right: 32px;
+}
+
+@keyframes title {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-618px);
+  }
 }
 
 .benefits .category {
