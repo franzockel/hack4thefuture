@@ -528,8 +528,8 @@ header button {
 .requirements h2 {
   color: var(--color-purple);
   text-align: end;
-  grid-column: 6 / span 7;
-  font-size: var(--headline-small);
+  grid-column: 6 / span 9;
+  font-size: var(--headline-medium);
 }
 
 .requirements .subline {
