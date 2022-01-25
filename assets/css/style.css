@@ -10,8 +10,7 @@
   --color-purple: #6930c3;
   --color-gray: #252525;
   --color-white: #ffffff;
-  --headline-huge: 384px;
-  --headline-big: 208px;
+  --headline-big: 384px;
   --headline-medium: 128px;
   --headline-small: 80px;
 }
@@ -189,7 +188,7 @@ header button {
 }
 
 .headerBgImg {
-  background-image: url("./assets/images/photo-1519389950473-47ba0277781c.png");
+  background-image: url("../images/photo-1519389950473-47ba0277781c.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -438,7 +437,7 @@ header button {
   color: var(--color-purple);
   grid-column: span 12;
   margin-bottom: 120px;
-  font-size: var(--headline-big);
+  font-size: var(--headline-medium);
 }
 
 .quote {
@@ -576,7 +575,7 @@ header button {
 
 .faq h2 {
   color: var(--color-turquoise);
-  font-size: var(--headline-huge);
+  font-size: var(--headline-big);
   line-height: 100%;
   position: absolute;
   top: 0;
@@ -665,7 +664,8 @@ header button {
   grid-column: 8 / span 6;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  column-gap: 24px;
+  gap: 24px;
+  align-self: start;
 }
 
 .partnerLogos .organizerLogo {
