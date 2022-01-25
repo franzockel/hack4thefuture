@@ -2,11 +2,8 @@
 
 @font-face {
   font-family: "Sectra";
-  src: url("./assets/fonts/GT-Sectra-Display-Super-Italic-Trial.woff2");
+  src: url("../fonts/GT-Sectra-Display-Super-Italic-Trial.woff2");
 }
-
-/* font-family: 'IBM Plex Sans', sans-serif;
-font-family: 'Space Grotesk', sans-serif; */
 
 :root {
   --color-turquoise: #80ffdb;
@@ -474,4 +471,32 @@ header button {
 
 .quote img {
   height: 298px;
+}
+
+/* ==========BENEFITS SECTION========== */
+
+.benefits {
+  background-color: var(--color-gray);
+  color: var(--color-turquoise);
+}
+
+.headlineWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.headlineWrapper h2 .benefits h2 {
+  font-size: 128px;
+}
+
+.benefits .category {
+  color: var(--color-white);
+}
+
+.benefit {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  grid-column: 2 / span 10;
+  margin-bottom: 64px;
 }
