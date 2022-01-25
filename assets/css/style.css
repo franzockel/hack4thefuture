@@ -286,7 +286,7 @@ header button {
 }
 
 .organizer a:after {
-  content: url("./assets/images/Arrow.svg");
+  content: url("../images/Arrow.svg");
   margin-left: 24px;
   margin-top: 11px;
   transition: 0.2s;
@@ -529,11 +529,12 @@ header button {
 .requirements h2 {
   color: var(--color-purple);
   text-align: end;
-  grid-column: span 12;
+  grid-column: 6 / span 7;
+  font-size: var(--headline-small);
 }
 
 .requirements .subline {
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 6;
   margin-bottom: 96px;
 }
 
@@ -542,7 +543,7 @@ header button {
 }
 
 .requirements .subline:nth-of-type(1) {
-  margin-top: -96px;
+  margin-top: -48px;
 }
 
 /* ==========CTA SECTION========== */
@@ -615,4 +616,58 @@ header button {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out, margin-top 0.2s ease-in-out;
+}
+
+/* ==========BECOME A PARTNER SECTION (ALMOST THE SAME AS REQUIREMENTS SECTION)========== */
+
+.requirementsContent {
+  grid-column: 1 / span 5;
+}
+
+.requirements a {
+  color: var(--color-purple);
+  text-decoration: none;
+}
+
+.requirements a:hover {
+  color: var(--color-white);
+}
+
+.requirements .buttonLight {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.requirements .organizer {
+  grid-column: 1 / span 6;
+}
+
+.requirements .organizer a {
+  color: var(--color-gray);
+}
+
+.requirements .organizer a:hover {
+  color: var(--color-purple);
+}
+
+.requirements .organizer a:after {
+  content: url("../images/arrow-purple.svg");
+  margin-left: 24px;
+  margin-top: 11px;
+  transition: 0.2s;
+}
+
+.requirements .organizer a:hover:after {
+  margin-left: 48px;
+}
+
+.partnerLogos {
+  grid-column: 8 / span 6;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 24px;
+}
+
+.partnerLogos .organizerLogo {
+  grid-column: span 2;
 }
