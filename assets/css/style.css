@@ -542,8 +542,25 @@ header button {
   margin-top: -96px;
 }
 
-/* ==========REGISTER SECTION========== */
+/* ==========CTA SECTION========== */
 
-/* .register h2 {
-  font-size: 128px;
-} */
+.cta {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.cta h2 {
+  grid-column: span 12;
+}
+
+.ctaContent {
+  grid-column: 6 / span 6;
+  margin-top: -64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.ctaContent .subline {
+  margin-bottom: 32px;
+}
