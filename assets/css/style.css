@@ -10,6 +10,9 @@
   --color-purple: #6930c3;
   --color-gray: #252525;
   --color-white: #ffffff;
+  --headline-big: 208px;
+  --headline-medium: 128px;
+  --headline-small: 80px;
 }
 
 * {
@@ -30,7 +33,8 @@ h1 {
 
 h2 {
   font-family: "Sectra";
-  font-size: 208px;
+  font-size: var(--headline-medium);
+  line-height: 110%;
   text-transform: uppercase;
 }
 
@@ -233,7 +237,7 @@ header button {
 
 .organizers h2 {
   color: var(--color-purple);
-  font-size: 160px;
+  font-size: var(--headline-medium);
 }
 
 .organizer {
@@ -431,6 +435,7 @@ header button {
   color: var(--color-purple);
   grid-column: span 12;
   margin-bottom: 120px;
+  font-size: var(--headline-big);
 }
 
 .quote {
@@ -457,7 +462,7 @@ header button {
   left: -30px;
   color: var(--color-turquoise);
   font-family: "Sectra";
-  font-size: 128px;
+  font-size: var(--headline-medium);
   z-index: -10;
 }
 
@@ -487,7 +492,6 @@ header button {
 }
 
 .benefits h2 {
-  font-size: 128px;
   animation: title 4s infinite linear;
   margin-right: 32px;
 }
@@ -512,3 +516,34 @@ header button {
   grid-column: 2 / span 10;
   margin-bottom: 64px;
 }
+
+/* ==========REQUIREMENTS SECTION========== */
+
+.requirements {
+  background-color: var(--color-turquoise);
+}
+
+.requirements h2 {
+  color: var(--color-purple);
+  text-align: end;
+  grid-column: span 12;
+}
+
+.requirements .subline {
+  grid-column: 1 / span 5;
+  margin-bottom: 96px;
+}
+
+.requirements .subline:last-of-type {
+  margin-bottom: 0;
+}
+
+.requirements .subline:nth-of-type(1) {
+  margin-top: -96px;
+}
+
+/* ==========REGISTER SECTION========== */
+
+/* .register h2 {
+  font-size: 128px;
+} */
