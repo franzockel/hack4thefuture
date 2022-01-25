@@ -10,6 +10,7 @@
   --color-purple: #6930c3;
   --color-gray: #252525;
   --color-white: #ffffff;
+  --headline-huge: 384px;
   --headline-big: 208px;
   --headline-medium: 128px;
   --headline-small: 80px;
@@ -71,7 +72,8 @@ h3 {
   margin: 0 auto;
 }
 
-button {
+.buttonLight,
+.buttonDark {
   padding: 8px 16px;
   border-radius: 2px;
   text-transform: uppercase;
@@ -82,7 +84,8 @@ button {
   transition: 0.1s;
 }
 
-button:hover {
+.buttonLight:hover,
+.buttonDark:hover {
   cursor: pointer;
   transform: translate(4px, -4px);
 }
@@ -563,4 +566,53 @@ header button {
 
 .ctaContent .subline {
   margin-bottom: 32px;
+}
+
+/* ==========FAQ SECTION========== */
+.faq {
+  position: relative;
+}
+
+.faq h2 {
+  color: var(--color-turquoise);
+  font-size: var(--headline-huge);
+  line-height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -10;
+}
+
+.faqElement {
+  grid-column: span 7;
+  border-top: 2px solid var(--color-purple);
+  padding: 24px 16px;
+}
+
+.faqElement:nth-of-type(1) {
+  margin-top: 168px;
+}
+
+.question {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  text-align: start;
+}
+
+.question:hover {
+  cursor: pointer;
+  color: var(--color-purple);
+}
+
+.question > h3:nth-of-type(2) {
+  margin-right: 24px;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out, margin-top 0.2s ease-in-out;
 }
