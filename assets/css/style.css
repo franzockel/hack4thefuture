@@ -163,11 +163,13 @@ header {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 header h1 {
   grid-column: span 9;
   z-index: 10;
+  max-width: 849px;
 }
 
 header div div {
@@ -308,6 +310,8 @@ header button {
 .levelOne,
 .levelTwo {
   display: flex;
+  /* max-width: 1400px; */
+  /* margin: 0 auto; */
 }
 
 .levelTwo {
@@ -315,9 +319,15 @@ header button {
 }
 
 .headlineBackground {
-  width: calc(
+  /* width: calc(
     100vw - 150px - 4 * 24px - ((100vw - 300px - 11 * 24px) / 12) * 8
-  );
+  ); */
+  width: 50%;
+}
+
+.scheduleContentBg {
+  width: 50%;
+  background-color: var(--color-gray);
 }
 
 .levelTwo .headlineBackground {
@@ -346,14 +356,15 @@ header button {
 
 .scheduleContent {
   padding: 96px 150px 120px calc((100vw - 300px - 11 * 24px) / 12 + 24px);
-  width: calc(
+  /* width: calc(
     100vw - 150px - 4 * 24px - ((100vw - 300px - 11 * 24px) / 12) * 4
-  );
+  ); */
+  max-width: 400px;
 }
 
-.levelOne .scheduleContent {
+/* .levelOne .scheduleContent {
   background-color: var(--color-gray);
-}
+} */
 
 .levelTwo .scheduleContent {
   background-color: var(--color-turquoise);
@@ -431,7 +442,7 @@ header button {
   );
   border-top: 4px solid var(--color-gray);
   border-bottom: 4px solid var(--color-gray);
-  box-sizing: content-box;
+  margin: -4px 0;
 }
 
 /* ==========VOICES SECTION========== */
