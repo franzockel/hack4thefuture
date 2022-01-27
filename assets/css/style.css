@@ -185,8 +185,8 @@ header .category {
   color: white;
 }
 
-header button {
-  grid-column-start: 1;
+.buttonWrapper {
+  grid-column: 1 / span 9;
 }
 
 .headerBgImg {
@@ -689,6 +689,14 @@ header button {
 }
 
 @media only screen and (max-width: 1200px) {
+  .grid {
+    padding: 96px 24px 120px;
+  }
+
+  header div div {
+    grid-column: 2 / span 9;
+  }
+
   .requirements h2 {
     font-size: var(--headline-small);
   }
@@ -709,8 +717,13 @@ header button {
 }
 
 @media only screen and (max-width: 920px) {
-  h1 {
-    /* font-size: 32px; */
+  nav {
+    padding: 16px;
+    align-items: flex-start;
+  }
+
+  nav button:not(nav button:last-of-type) {
+    margin-right: 8px;
   }
 
   .organizers h2 {
@@ -719,7 +732,18 @@ header button {
 }
 
 @media only screen and (max-width: 576px) {
+  .headerBgImg {
+    height: 55%;
+    width: 40%;
+  }
+
+  header .category {
+    grid-column: span 7;
+  }
+}
+
+@media only screen and (max-width: 576px) {
   h1 {
-    font-size: 32px;
+    font-size: 64px;
   }
 }
