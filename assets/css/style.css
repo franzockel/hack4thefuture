@@ -229,7 +229,7 @@ header .category {
   font-size: 80px;
   line-height: 110%;
   margin-top: 188px;
-  margin-bottom: 60px;
+  margin-bottom: 64px;
 }
 
 /* ==========ORGANIZERS SECTION========== */
@@ -287,7 +287,7 @@ header .category {
 }
 
 .organizer a:after {
-  content: url("../images/Arrow.svg");
+  content: url("../images/arrow-desktop.svg");
   margin-left: 24px;
   margin-top: 11px;
   transition: 0.2s;
@@ -666,7 +666,7 @@ header .category {
 }
 
 .requirements .organizer a:after {
-  content: url("../images/arrow-purple.svg");
+  content: url("../images/arrow-desktop-purple.svg");
   margin-left: 24px;
   margin-top: 11px;
   transition: 0.2s;
@@ -708,7 +708,7 @@ header .category {
   }
 
   .organizer {
-    grid-column: span 12;
+    grid-column: 3 / span 10;
   }
 
   .cta h2 {
@@ -729,9 +729,37 @@ header .category {
   .organizers h2 {
     font-size: var(--headline-small);
   }
+
+  .register div:nth-of-type(1) {
+    grid-column: span 9;
+  }
+
+  .register div:nth-of-type(1) p {
+    margin-bottom: 48px;
+  }
+
+  .register div:nth-of-type(2) {
+    grid-column: 4 / span 9;
+  }
+
+  .register div:nth-of-type(2) h2 {
+    font-size: 64px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
 }
 
 @media only screen and (max-width: 576px) {
+  :root {
+    /* --headline-big: 384px; */
+    --headline-medium: 64px;
+    --headline-small: 48px;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+
   .headerBgImg {
     height: 55%;
     width: 40%;
@@ -740,10 +768,30 @@ header .category {
   header .category {
     grid-column: span 7;
   }
-}
 
-@media only screen and (max-width: 576px) {
-  h1 {
-    font-size: 64px;
+  .register div:nth-of-type(1) {
+    grid-column: span 12;
+  }
+
+  .register div:nth-of-type(2) {
+    grid-column: 2 / span 11;
+  }
+
+  .register div:nth-of-type(2) h2 {
+    font-size: 48px;
+  }
+
+  .organizer {
+    grid-column: span 12;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .organizerLogo {
+    grid-column: span 4;
+    margin-bottom: 24px;
+  }
+
+  .organizer div {
+    grid-column: span 12;
   }
 }
