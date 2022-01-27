@@ -747,6 +747,18 @@ header .category {
     margin-top: 32px;
     margin-bottom: 32px;
   }
+
+  .quote {
+    grid-column: span 10;
+  }
+
+  .quote:nth-of-type(1) {
+    grid-column: 2 / span 10;
+  }
+
+  .quote:nth-of-type(3) {
+    grid-column: 3 / span 10;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -758,6 +770,10 @@ header .category {
 
   h1 {
     font-size: 64px;
+  }
+
+  .grid {
+    padding: 60px 24px 80px;
   }
 
   .headerBgImg {
@@ -794,4 +810,51 @@ header .category {
   .organizer div {
     grid-column: span 12;
   }
+
+  .quote {
+    grid-column: 2 / span 10;
+  }
+
+  .quote:nth-of-type(1) {
+    grid-column: 2 / span 10;
+  }
+
+  .quote:nth-of-type(3) {
+    grid-column: 2 / span 10;
+  }
+
+  .quote::before {
+    font-size: 128px;
+  }
+
+  .quote .category {
+    margin-bottom: 24px;
+  }
+
+  .quote img {
+    height: 199px;
+  }
+
+  /* .quote::before {
+    content: '"';
+    position: absolute;
+    top: -49px;
+    left: -30px;
+    color: var(--color-turquoise);
+    font-family: "Sectra";
+    font-size: var(--headline-medium);
+    z-index: -10;
+  }
+  
+  .quote .subline {
+    margin-bottom: 32px;
+  }
+  
+  .quote .category {
+    width: 100%;
+  }
+  
+  .quote img {
+    height: 298px;
+  } */
 }
