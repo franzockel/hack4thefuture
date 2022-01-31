@@ -303,75 +303,71 @@ header .category {
 
 /* ==========SCHEDULE SECTION========== */
 
-.schedule {
+#schedule {
   background-color: var(--color-turquoise);
 }
 
 .levelOne,
 .levelTwo {
   display: flex;
-  /* max-width: 1400px; */
-  /* margin: 0 auto; */
 }
 
-.levelTwo {
-  flex-direction: row-reverse;
+#schedule .scheduleHeadlineWrapper {
+  padding: 96px 0 120px;
+  width: 33.333%;
 }
 
-.headlineBackground {
-  /* width: calc(
-    100vw - 150px - 4 * 24px - ((100vw - 300px - 11 * 24px) / 12) * 8
-  ); */
-  width: 50%;
-}
-
-.scheduleContentBg {
-  width: 50%;
+.levelTwo .scheduleHeadlineWrapper {
   background-color: var(--color-gray);
 }
 
-.levelTwo .headlineBackground {
-  background-color: var(--color-gray);
-}
-
-.levelTwo .scheduleHeadline {
-  color: var(--color-white);
-}
-
-.scheduleHeadline {
-  /* transform-origin: top left;
-  transform: rotate(-90deg) translateX(-446px); */
-  color: var(--color-purple);
+#schedule .headline {
   position: -webkit-sticky;
   position: sticky;
-  top: calc(100vh - 446px - 24px);
-  /* width: 446px; */
-  height: 123px;
 }
 
-.scheduleHeadline h2 {
-  line-height: 100px;
-  font-size: 80px;
+.levelOne .headline {
+  height: 344px;
+  width: 80px;
+  left: calc(33.333% - 80px - 24px);
+  top: calc(100vh - 96px - 344px - 64px);
+}
+
+.levelTwo .headline {
+  left: calc(66.666% + 24px);
+  top: calc(100vh - 96px - 354px - 64px);
+  height: 354px;
+  width: 83px;
 }
 
 .scheduleContent {
-  padding: 96px 150px 120px calc((100vw - 300px - 11 * 24px) / 12 + 24px);
-  /* width: calc(
-    100vw - 150px - 4 * 24px - ((100vw - 300px - 11 * 24px) / 12) * 4
-  ); */
-  max-width: 400px;
-}
-
-/* .levelOne .scheduleContent {
   background-color: var(--color-gray);
-} */
-
-.levelTwo .scheduleContent {
-  background-color: var(--color-turquoise);
+  width: 66.666%;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 73px));
+  padding: 96px 0 120px;
+  gap: 24px;
 }
 
 .levelOne .scheduleContent {
   color: var(--color-turquoise);
+}
+
+.levelTwo .scheduleContent {
+  justify-content: end;
+  background-color: transparent;
+}
+
+.scheduleContent p,
+.scheduleContent div {
+  grid-column: 2 / span 7;
+  max-width: 655px;
+}
+
+.levelTwo .scheduleContent p,
+.levelTwo .scheduleContent div {
+  grid-column: 1 / span 7;
+  max-width: 655px;
 }
 
 .scheduleContent > div {
@@ -388,13 +384,8 @@ header .category {
   margin-bottom: 64px;
 }
 
-.levelOne .scheduleContent .category {
+.scheduleContent .category {
   color: var(--color-white);
-  margin-right: 16px;
-}
-
-.levelTwo .scheduleContent .category {
-  color: var(--color-purple);
   margin-right: 16px;
 }
 
@@ -409,12 +400,16 @@ header .category {
   align-items: center;
 }
 
+.levelTwo .scheduleContent .workshop {
+  margin-top: 0;
+}
+
 .scheduleContent .workshop h4 {
   margin-bottom: 16px;
 }
 
 .scheduleContent .workshop:before {
-  content: "<";
+  content: "[";
   font-family: "Sectra";
   font-size: 64px;
   line-height: 64px;
@@ -423,7 +418,7 @@ header .category {
 }
 
 .scheduleContent .workshop:after {
-  content: ">";
+  content: "]";
   font-family: "Sectra";
   font-size: 64px;
   line-height: 64px;
@@ -434,16 +429,35 @@ header .category {
 .rectangle {
   height: 216px;
   background-color: var(--color-gray);
-  clip-path: polygon(
-    calc(100vw - 150px - 4 * 24px - ((100vw - 300px - 11 * 24px) / 12) * 8) 0,
-    100% 0,
-    100% 100%,
-    calc(100vw - 150px - 4 * 24px - ((100vw - 300px - 11 * 24px) / 12) * 4) 100%
-  );
+  clip-path: polygon(33.333% 0, 100% 0, 100% 100%, 66.666% 100%);
   border-top: 4px solid var(--color-gray);
   border-bottom: 4px solid var(--color-gray);
-  margin: -4px 0;
+  margin-top: -1px;
+  margin-bottom: -1px;
 }
+
+/* 
+
+.levelTwo .scheduleHeadline {
+  color: var(--color-white);
+}
+
+.scheduleHeadline {
+   transform-origin: top left;
+  transform: rotate(-90deg) translateX(-446px); 
+  color: var(--color-purple);
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(100vh - 346px - 64px);
+  grid-column: span 4;
+}
+
+.scheduleHeadline h2 {
+  line-height: 100px;
+  font-size: 80px;
+}
+
+} */
 
 /* ==========VOICES SECTION========== */
 
@@ -695,6 +709,14 @@ header .category {
 
   header div div {
     grid-column: 2 / span 9;
+  }
+
+  .levelOne .scheduleContent {
+    padding: 96px 24px 120px 0;
+  }
+
+  .levelTwo .scheduleContent {
+    padding: 96px 0 120px 24px;
   }
 
   .requirements h2 {
