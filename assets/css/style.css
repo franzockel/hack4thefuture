@@ -71,6 +71,27 @@ h3 {
   margin: 0 auto;
 }
 
+.logo {
+  top: 16px;
+  left: 32px;
+}
+
+.startLogo {
+  position: fixed;
+  z-index: 100;
+}
+
+.altLogo {
+  position: absolute;
+  z-index: 100;
+}
+
+header,
+section {
+  overflow: hidden;
+  position: relative;
+}
+
 .buttonLight,
 .buttonDark {
   padding: 8px 16px;
@@ -88,13 +109,6 @@ h3 {
   cursor: pointer;
   transform: translate(4px, -4px);
 }
-
-/* button:active {
-  transform: translate(-10px, 10px);
-  box-shadow: inset 0px 0px 0px 5px #452194, inset 0px 0px 0px 10px #8cefdd,
-    inset 0px 0px 0px 15px #452194, 0px 0px 0px -5px #ccb9fe,
-    0px 0px 0px 0px #452194;
-} */
 
 .buttonLight {
   background: var(--color-turquoise);
@@ -142,14 +156,8 @@ nav {
   right: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   z-index: 100;
-}
-
-.logo {
-  width: 64px;
-  height: 64px;
-  background: var(--color-white);
 }
 
 nav button:not(nav button:last-of-type) {
@@ -234,7 +242,7 @@ header .category {
 
 /* ==========ORGANIZERS SECTION========== */
 
-.organizers {
+.organizersWrapper {
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -436,29 +444,6 @@ header .category {
   margin-bottom: -1px;
 }
 
-/* 
-
-.levelTwo .scheduleHeadline {
-  color: var(--color-white);
-}
-
-.scheduleHeadline {
-   transform-origin: top left;
-  transform: rotate(-90deg) translateX(-446px); 
-  color: var(--color-purple);
-  position: -webkit-sticky;
-  position: sticky;
-  top: calc(100vh - 346px - 64px);
-  grid-column: span 4;
-}
-
-.scheduleHeadline h2 {
-  line-height: 100px;
-  font-size: 80px;
-}
-
-} */
-
 /* ==========VOICES SECTION========== */
 
 .voices h2 {
@@ -597,7 +582,8 @@ header .category {
 }
 
 /* ==========FAQ SECTION========== */
-.faq {
+
+.faqWrapper {
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
