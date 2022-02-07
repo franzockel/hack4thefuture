@@ -413,7 +413,7 @@ header .category {
   max-width: 655px;
 }
 
-.scheduleContent > div {
+.scheduleContent > div:not(.headlineMobile) {
   display: flex;
   align-items: baseline;
   margin-bottom: 80px;
@@ -421,6 +421,10 @@ header .category {
 
 .scheduleContent > div:last-of-type {
   margin-bottom: 0;
+}
+
+.scheduleContent .headlineMobile {
+  display: none;
 }
 
 .scheduleContent .subline {
@@ -445,10 +449,7 @@ header .category {
 
 .levelTwo .scheduleContent .workshop {
   margin-top: 0;
-}
-
-.scheduleContent .workshop h4 {
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 
 .scheduleContent .workshop:before {
@@ -752,7 +753,7 @@ header .category {
 
 #partner .contactPerson .category {
   color: var(--color-gray);
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .requirements .organizer a,
@@ -890,6 +891,32 @@ header .category {
     margin-bottom: 32px;
   }
 
+  .levelOne,
+  .levelTwo {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .scheduleHeadlineWrapper {
+    display: none;
+  }
+  .headlineMobile {
+    display: block;
+  }
+
+  .scheduleContent {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .scheduleContent .headlineMobile {
+    display: inline-block;
+  }
+
+  .rectangle {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+  }
+
   .quote {
     grid-column: span 10;
   }
@@ -900,6 +927,10 @@ header .category {
 
   .quote:nth-of-type(3) {
     grid-column: 3 / span 10;
+  }
+
+  .benefit {
+    margin-bottom: 32px;
   }
 
   .faqElement {
