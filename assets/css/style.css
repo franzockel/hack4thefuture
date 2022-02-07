@@ -80,6 +80,7 @@ h3 {
 .startLogo {
   position: fixed;
   z-index: 100;
+  display: none;
 }
 
 .altLogo {
