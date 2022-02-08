@@ -335,18 +335,10 @@ header .category {
 }
 
 .organizerLogoWrapper {
-  /* background-color: silver;
-  color: white;
-  display: inline-block;
-  padding: 8px; */
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
   grid-column: span 2;
-  /* max-width: 100px;
-  margin: 0 auto; */
-  /* height: 32px;
-  text-align: center; */
 }
 
 .organizerLogoWrapper img {
@@ -407,12 +399,6 @@ header .category {
 .levelTwo .scheduleHeadlineWrapper {
   background-color: var(--color-gray);
 }
-
-/* #schedule .headline {
-  position: -webkit-sticky;
-  position: sticky;
-  
-} */
 
 .levelOne .headline {
   position: -webkit-sticky;
