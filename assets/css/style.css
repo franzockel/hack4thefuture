@@ -462,12 +462,9 @@ header .category {
   display: none;
 }
 
-#levelOne .subline {
-  margin-bottom: 64px;
-}
-
+#levelOne .subline,
 #levelTwo .subline {
-  margin-bottom: 32px;
+  margin-bottom: 64px;
 }
 
 .scheduleContent .category {
@@ -488,43 +485,13 @@ header .category {
 }
 
 #levelTwo .benefit {
-  margin-bottom: 32px;
-  margin-top: 0;
-}
-
-#levelTwo .benefit .category {
-  color: var(--color-purple);
-}
-
-/* .scheduleContent .workshop {
-  margin-top: 48px;
-  display: flex;
-  gap: 24px;
-  align-items: center;
-} */
-
-/* .levelTwo .scheduleContent .workshop {
-  margin-top: 0;
+  margin-top: 32px;
   margin-bottom: 0;
 }
 
-.scheduleContent .workshop:before {
-  content: "[";
-  font-family: "Sectra";
-  font-size: 64px;
-  line-height: 64px;
+#levelTwo .category {
   color: var(--color-purple);
-  margin-bottom: 8px;
 }
-
-.scheduleContent .workshop:after {
-  content: "]";
-  font-family: "Sectra";
-  font-size: 64px;
-  line-height: 64px;
-  color: var(--color-purple);
-  margin-bottom: 8px;
-} */
 
 .rectangle {
   height: 216px;
