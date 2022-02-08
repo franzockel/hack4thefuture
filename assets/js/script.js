@@ -1,3 +1,5 @@
+// FAQ Accordeon
+
 const acc = document.getElementsByClassName("question");
 
 for (let i = 0; i < acc.length; i++) {
@@ -15,18 +17,30 @@ for (let i = 0; i < acc.length; i++) {
   });
 }
 
-document.querySelector("#menuButton").addEventListener("click", openMenu);
+// Menu Overlay
 
-function openMenu() {
-  document.getElementById("menu").style.left = "0";
-}
-
-document.querySelector("#closeMenuButton").addEventListener("click", closeMenu);
+let nav = false;
 
 document.querySelectorAll("#menu a").forEach((item) => {
   item.addEventListener("click", closeMenu);
 });
 
+document.querySelector("#menuButton").addEventListener("click", toggleMenu);
+
+function openMenu() {
+  document.getElementById("menu").style.left = "0";
+  document.querySelector("#menuButton").classList.remove("closed");
+  document.querySelector("#menuButton").classList.add("opened");
+  nav = true;
+}
+
 function closeMenu() {
   document.getElementById("menu").style.left = "100vw";
+  document.querySelector("#menuButton").classList.remove("opened");
+  document.querySelector("#menuButton").classList.add("closed");
+  nav = false;
+}
+
+function toggleMenu() {
+  nav ? closeMenu() : openMenu();
 }
