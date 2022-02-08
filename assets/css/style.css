@@ -89,7 +89,7 @@ h3 {
 
 header,
 section {
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
 }
 
@@ -364,12 +364,15 @@ header .category {
   background-color: var(--color-gray);
 }
 
-#schedule .headline {
+/* #schedule .headline {
   position: -webkit-sticky;
   position: sticky;
-}
+  
+} */
 
 .levelOne .headline {
+  position: -webkit-sticky;
+  position: sticky;
   height: 344px;
   width: 80px;
   left: calc(33.333% - 80px - 24px);
@@ -377,6 +380,8 @@ header .category {
 }
 
 .levelTwo .headline {
+  position: -webkit-sticky;
+  position: sticky;
   left: calc(66.666% + 24px);
   top: calc(100vh - 96px - 354px - 64px);
   height: 354px;
