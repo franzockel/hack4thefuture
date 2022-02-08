@@ -20,7 +20,7 @@
   padding: 0;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -70,27 +70,6 @@ h3 {
   padding: 96px 150px 120px;
   max-width: 1400px;
   margin: 0 auto;
-}
-
-.logo {
-  top: 16px;
-  left: 32px;
-}
-
-.startLogo {
-  position: fixed;
-  z-index: 100;
-}
-
-.altLogo {
-  position: absolute;
-  z-index: 100;
-}
-
-header,
-section {
-  /* overflow: hidden; */
-  position: relative;
 }
 
 .buttonPurple,
@@ -185,8 +164,12 @@ nav {
   right: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   z-index: 100;
+}
+
+nav img {
+  height: 64px;
 }
 
 nav button:not(nav button:last-of-type) {

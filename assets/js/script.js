@@ -14,18 +14,3 @@ for (let i = 0; i < acc.length; i++) {
     }
   });
 }
-
-function logoSwitch() {
-  $(".altLogo").each(function () {
-    $(this).css(
-      "top",
-      $(".startLogo").offset().top - $(this).closest("section").offset().top
-    );
-  });
-}
-
-$(document).scroll(function () {
-  logoSwitch();
-});
-
-logoSwitch();
