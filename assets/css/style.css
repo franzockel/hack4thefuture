@@ -462,8 +462,12 @@ header .category {
   display: none;
 }
 
-.scheduleContent .subline {
+#levelOne .subline {
   margin-bottom: 64px;
+}
+
+#levelTwo .subline {
+  margin-bottom: 32px;
 }
 
 .scheduleContent .category {
@@ -475,14 +479,31 @@ header .category {
   margin-bottom: 16px;
 }
 
-.scheduleContent .workshop {
+#schedule .benefit {
+  margin-top: 32px;
+}
+
+#schedule .benefit h3 {
+  margin-bottom: 0;
+}
+
+#levelTwo .benefit {
+  margin-bottom: 32px;
+  margin-top: 0;
+}
+
+#levelTwo .benefit .category {
+  color: var(--color-purple);
+}
+
+/* .scheduleContent .workshop {
   margin-top: 48px;
   display: flex;
   gap: 24px;
   align-items: center;
-}
+} */
 
-.levelTwo .scheduleContent .workshop {
+/* .levelTwo .scheduleContent .workshop {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -503,7 +524,7 @@ header .category {
   line-height: 64px;
   color: var(--color-purple);
   margin-bottom: 8px;
-}
+} */
 
 .rectangle {
   height: 216px;
