@@ -448,7 +448,7 @@ header .category {
   max-width: 655px;
 }
 
-.scheduleContent > div:not(.headlineMobile) {
+.scheduleContent > div:not(.headlineMobile):not(.workshop) {
   display: flex;
   align-items: baseline;
   margin-bottom: 80px;
