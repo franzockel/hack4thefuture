@@ -176,6 +176,55 @@ nav button:not(nav button:last-of-type) {
   margin-right: 24px;
 }
 
+#menuButton {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  padding: 8px 8px 4px;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  transition: left 1s;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-purple);
+  z-index: 50;
+  padding-top: 40px;
+}
+
+#menu .grid {
+  height: 100%;
+}
+
+.menuContent {
+  grid-column: 7 / span 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#menu a {
+  font-family: "Sectra";
+  font-size: 32px;
+  line-height: 110%;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+#menu a:hover {
+  color: var(--color-turquoise);
+}
+
+#closeMenuButton {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  padding: 8px 8px 4px;
+}
+
 /* ==========HEADER SECTION========== */
 
 header {
@@ -857,6 +906,10 @@ header .category {
     margin-right: 8px;
   }
 
+  .menuContent {
+    grid-column: 4 / span 9;
+  }
+
   .organizers h2 {
     font-size: var(--headline-small);
   }
@@ -956,6 +1009,10 @@ header .category {
 
   .grid {
     padding: 60px 24px 80px;
+  }
+
+  #menu .grid {
+    padding: 80px 24px 80px;
   }
 
   .headerBgImg {

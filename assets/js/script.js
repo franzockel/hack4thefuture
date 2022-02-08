@@ -14,3 +14,19 @@ for (let i = 0; i < acc.length; i++) {
     }
   });
 }
+
+document.querySelector("#menuButton").addEventListener("click", openMenu);
+
+function openMenu() {
+  document.getElementById("menu").style.left = "0";
+}
+
+document.querySelector("#closeMenuButton").addEventListener("click", closeMenu);
+
+document.querySelectorAll("#menu a").forEach((item) => {
+  item.addEventListener("click", closeMenu);
+});
+
+function closeMenu() {
+  document.getElementById("menu").style.left = "100vw";
+}
