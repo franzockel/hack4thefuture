@@ -29,7 +29,7 @@ h1 {
   line-height: 110%;
   text-transform: uppercase;
   color: var(--color-turquoise);
-  margin: 15vh 0 24px;
+  margin-bottom: 24px;
 }
 
 h2 {
@@ -247,17 +247,25 @@ header {
   position: relative;
 }
 
+header .subline {
+  color: white;
+  grid-column: span 9;
+  margin-bottom: 16px;
+}
+
 header h1 {
   grid-column: span 9;
   max-width: 849px;
 }
 
-header div div {
+header div div:not(.buttonWrapper) {
   grid-column: span 9;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   column-gap: 24px;
   z-index: 10;
+  margin-top: 15vh;
+  margin-bottom: 0;
 }
 
 header .category {
@@ -276,6 +284,12 @@ header .category {
   top: 0;
   right: 0;
   z-index: 0;
+}
+
+/* ==========IDEA SECTION========== */
+
+.idea .ctaContent div {
+  background-color: red;
 }
 
 /* ==========REGISTER SECTION========== */
@@ -648,6 +662,11 @@ header .category {
   margin-bottom: 32px;
 }
 
+.ctaContent .benefit {
+  margin-bottom: 32px;
+  width: 100%;
+}
+
 /* ==========FAQ SECTION========== */
 
 .faqWrapper {
@@ -701,6 +720,15 @@ header .category {
 }
 
 /* ==========BECOME A PARTNER SECTION (ALMOST THE SAME AS REQUIREMENTS SECTION)========== */
+
+.headerSubline {
+  font-family: "IBM Plex Sans";
+  font-style: italic;
+  font-size: 18px;
+  color: var(--color-purple);
+  grid-column: 1 / span 12;
+  text-align: right;
+}
 
 .requirementsContent {
   grid-column: 1 / span 5;
