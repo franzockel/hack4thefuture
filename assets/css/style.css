@@ -172,8 +172,13 @@ nav {
   height: 64px;
 }
 
-nav button:not(nav button:last-of-type) {
+nav button:not(nav button:last-of-type),
+nav a {
   margin-right: 24px;
+}
+
+nav a {
+  text-decoration: none;
 }
 
 nav div {
@@ -289,7 +294,15 @@ header .category {
 /* ==========IDEA SECTION========== */
 
 .idea .ctaContent div {
-  background-color: red;
+  margin-bottom: 16px;
+}
+
+.idea .ctaContent {
+  align-items: flex-start;
+}
+
+.idea .ctaContent h3 {
+  margin-bottom: 16px;
 }
 
 /* ==========REGISTER SECTION========== */
@@ -353,11 +366,6 @@ header .category {
   align-items: flex-start;
   justify-content: flex-end;
   grid-column: span 2;
-}
-
-.organizerLogoWrapper img {
-  width: 100%;
-  max-width: 100px;
 }
 
 .organizerText {
@@ -916,7 +924,8 @@ header .category {
     align-items: flex-start;
   }
 
-  nav button:not(nav button:last-of-type) {
+  nav button:not(nav button:last-of-type),
+  nav a {
     margin-right: 8px;
   }
 
@@ -1058,6 +1067,10 @@ header .category {
   .organizerLogoWrapper {
     justify-content: flex-start;
     margin-bottom: 24px;
+  }
+
+  .organizerLogoWrapper img {
+    max-width: 160px;
   }
 
   .organizer div {
