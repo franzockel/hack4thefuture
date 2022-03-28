@@ -572,8 +572,12 @@ header .category {
   position: relative;
   margin-bottom: 80px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  /* flex-direction: column;
+  align-items: flex-end; */
+}
+
+.quote div {
+  margin-right: 64px;
 }
 
 .quote:nth-of-type(1) {
@@ -1045,6 +1049,17 @@ header .category {
 
   .requirementsContent {
     grid-column: 1 / span 9;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .quote {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .quote img {
+    margin-top: 16px;
   }
 }
 
