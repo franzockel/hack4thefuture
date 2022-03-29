@@ -85,6 +85,7 @@ h3 {
   letter-spacing: 0.1em;
   border: none;
   transition: 0.1s;
+  text-decoration: none;
 }
 
 .buttonPurple:hover,
