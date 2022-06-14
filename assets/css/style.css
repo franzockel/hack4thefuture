@@ -272,7 +272,7 @@ header h1 {
 }
 
 header div div:not(.buttonWrapper) {
-  grid-column: span 9;
+  grid-column: span 6;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   column-gap: 24px;
@@ -283,7 +283,7 @@ header div div:not(.buttonWrapper) {
 
 header .category {
   margin-bottom: 24px;
-  grid-column: span 4;
+  grid-column: span 6;
   color: white;
 }
 
